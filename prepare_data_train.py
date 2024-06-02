@@ -92,9 +92,9 @@ def generate_flow_direction_dict(site_codes, site_labels, flow_direction_data):
                 if direction is not None and direction > 0:
                     outgoing_flows.append(f"to {site_labels[dst]}")
 
-        incoming_description = f"The water flows into this site {', '.join(incoming_flows)}" if incoming_flows else ""
-        outgoing_description = f" and flows out {', '.join(outgoing_flows)}" if outgoing_flows else ""
-        flow_description = incoming_description + outgoing_description + "."
+        incoming_description = f"The water flows into this site: {', '.join(incoming_flows)}. " if incoming_flows else ""
+        outgoing_description = f"The water flows out from this site: {', '.join(outgoing_flows)}. " if outgoing_flows else ""
+        flow_description = incoming_description + outgoing_description
 
         flow_direction_dict[site] = flow_description
 
@@ -105,8 +105,8 @@ def create_dialogue_json_and_st_data(data, date_range, site_codes, site_labels, 
     N, T, F = data.shape
     all_dialogues = []
     st_data_list = []
-    all_ids = []
 
+    idx_len = 0
     for t in range(T - 24):  # Ensure we have enough data for future 12 steps
         for n in range(N):
             sediment_values = data[n, t:t+12, 0]
@@ -129,19 +129,21 @@ def create_dialogue_json_and_st_data(data, date_range, site_codes, site_labels, 
                 f"Now we aim to predict the sediment and discharge in this region within the next 12 time steps. "
                 f"{direction_info} To improve prediction accuracy, a spatio-temporal model is utilized to encode the historical data as tokens {DEFAULT_STHIS_TOKEN}, "
                 f"where the first token corresponds to sediment and the second token corresponds to discharge. "
-                f"Please conduct an analysis of the patterns in this region, considering the provided time and information, and then generate the prediction tokens for classification, in the form '{DEFAULT_STPRE_TOKEN}'."
+                f"Please conduct an analysis of the patterns in this region, considering the provided time and information, and then generate the prediction tokens for classification, in the form {DEFAULT_STPRE_TOKEN}."
             )
             gpt_text = f"Based on the given information, the predicted tokens in this region are {DEFAULT_STPRE_TOKEN}."
 
-            dialogue_id = f"train_site_{site_codes[n]}_{t}_{t+12}_len_0"
-            all_ids.append(dialogue_id)
-            all_dialogues.append([{
-                "from": "human",
-                "value": human_text
-            }, {
-                "from": "gpt",
-                "value": gpt_text
-            }])
+            dialogue_id = f"train_discharge_site_{n}_{n+1}_len_{idx_len // 20}"
+            all_dialogues.append({
+                "id": dialogue_id,
+                "conversations": [{
+                    "from": "human",
+                    "value": human_text
+                }, {
+                    "from": "gpt",
+                    "value": gpt_text
+                }]
+            })
 
             # 将数据填充到st_data_x和st_data_y
             st_data_x = np.zeros((1, 12, N, F))
@@ -151,12 +153,18 @@ def create_dialogue_json_and_st_data(data, date_range, site_codes, site_labels, 
             st_data_y[0, :, n, 0] = future_sediment_values
             st_data_y[0, :, n, 1] = future_discharge_values
 
-            st_data_list.append({
-                "data_x": st_data_x,
-                "data_y": st_data_y
-            })
+            if idx_len % 20 == 0:
+                st_data_list.append({
+                    "data_x": np.zeros((1, 12, N, F)),
+                    "data_y": np.zeros((1, 12, N, F))
+                })
 
-    return all_ids, all_dialogues, st_data_list
+            st_data_list[idx_len // 20]["data_x"][0, :, n, :] = st_data_x[0, :, n, :]
+            st_data_list[idx_len // 20]["data_y"][0, :, n, :] = st_data_y[0, :, n, :]
+
+            idx_len += 1
+
+    return all_dialogues, st_data_list
 
 
 if __name__ == "__main__":
@@ -175,17 +183,11 @@ if __name__ == "__main__":
     flow_direction_dict = generate_flow_direction_dict(site_codes, site_labels, flow_direction_data)
 
     # 生成对话数据集和st data
-    ids, dialogues, st_data_list = create_dialogue_json_and_st_data(spatio_temporal_data, date_range, site_codes, site_labels, flow_direction_dict)
-
-    # 创建DataFrame
-    data = {
-        "id": {str(i): ids[i] for i in range(len(ids))},
-        "conversations": {str(i): dialogues[i] for i in range(len(dialogues))}
-    }
+    dialogues, st_data_list = create_dialogue_json_and_st_data(spatio_temporal_data, date_range, site_codes, site_labels, flow_direction_dict)
 
     # 保存对话数据集为JSON文件
     with open('data/discharge/st_gpt.json', 'w') as f:
-        json.dump(data, f, indent=4)
+        json.dump(dialogues, f, indent=0)
 
     # 保存st data为pkl文件
     with open('data/discharge/st_data.pkl', 'wb') as f:
