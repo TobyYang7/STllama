@@ -1,3 +1,4 @@
 checkpoints/vicuna-7b-v1.5-16k/*
 data/train_data/*
 __pycache__/*
+.DS_Store
