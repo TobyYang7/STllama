@@ -1,2 +1,0 @@
-data/discharge/* filter=lfs diff=lfs merge=lfs -text
-discharge/* filter=lfs diff=lfs merge=lfs -text
