@@ -5,9 +5,8 @@ st_data_path=./data/discharge/st_data.pkl
 pretra_ste=ST_Encoder
 output_model=./checkpoints/UrbanGPT
 
-wandb offline
-python3 -m torch.distributed.run --nnodes=1 --nproc_per_node=4 --master_port=20001 \
-    urbangpt/train/train_mem.py \
+# wandb offline
+python urbangpt/train/train_mem.py \
     --model_name_or_path ${model_path} \
     --version v1 \
     --data_path ${instruct_ds} \
@@ -17,11 +16,11 @@ python3 -m torch.distributed.run --nnodes=1 --nproc_per_node=4 --master_port=200
     --tune_st_mlp_adapter True \
     --st_select_layer -2 \
     --use_st_start_end \
-    --bf16 True \
+    --fp16 True \
     --output_dir ${output_model} \
     --num_train_epochs 3 \
-    --per_device_train_batch_size 1 \
-    --per_device_eval_batch_size 1 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
     --gradient_accumulation_steps 8 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \

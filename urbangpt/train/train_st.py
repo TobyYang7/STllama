@@ -518,8 +518,7 @@ class LazySupervisedDataset_ST(Dataset):
         return len(self.list_data_dict)
 
     def __getitem__(self, i) -> Dict[str, torch.Tensor]:
-        print(f"Attempting to access index: {i}")
-        print(f"Available keys: {self.list_data_dict.keys()}")  # Add this line
+        # print(f"Attempting to access index: {i}")
         sources = self.list_data_dict[i]
         region_start = int(sources["id"].split('_')[3])
         region_end = int(sources["id"].split('_')[4])
