@@ -1,5 +1,8 @@
-checkpoints/vicuna-7b-v1.5-16k/*
+checkpoints/vicuna-7b-v1.5-16k
 data/train_data/*
-__pycache__/*
+__pycache__
 .DS_Store
-data/discharge/*
+data/discharge
+checkpoints/UrbanGPT
+data/ST_data_urbangpt
+checkpoints_urbangpt
