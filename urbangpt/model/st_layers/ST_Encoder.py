@@ -1,8 +1,6 @@
 from __future__ import division
 import torch
 import torch.nn as nn
-from torch.nn import init
-import numbers
 import torch.nn.functional as F
 from transformers.configuration_utils import PretrainedConfig
 
@@ -155,4 +153,3 @@ class ST_Enc(nn.Module):
         x = F.relu(self.end_conv_1(x))
         x = self.end_conv_2(x)
         return x, x_emb
-
