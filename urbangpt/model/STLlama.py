@@ -28,6 +28,7 @@ from urbangpt.model.st_layers import ST_Enc, parse_args
 import json
 import os.path as osp
 import glob
+import numpy as np
 
 
 IGNORE_INDEX = -100
@@ -36,6 +37,32 @@ DEFAULT_STPRE_TOKEN = "<ST_PRE>"
 DEFAULT_ST_PATCH_TOKEN = "<ST_patch>"
 DEFAULT_ST_START_TOKEN = "<ST_start>"
 DEFAULT_ST_END_TOKEN = "<ST_end>"
+
+
+class Scaler:
+    def __init__(self, mean, std, device=None):
+        # Convert mean and std to tensors and move them to the specified device
+        self.mean = torch.tensor(mean, dtype=torch.float32, device=device)
+        self.std = torch.tensor(std, dtype=torch.float32, device=device)
+
+    def transform(self, data):
+        # Ensure that the data is on the same device as mean and std
+        data = data.to(self.mean.device)
+        # Normalize the data
+        return (data - self.mean) / self.std
+
+    def inverse_transform(self, data):
+        # Ensure that the data is on the same device as mean and std
+        data = data.to(self.mean.device)
+        # De-normalize the data
+        return (data * self.std) + self.mean
+
+
+global_data_path = "./data/discharge/data_encoder.npy"
+global_data = np.load(global_data_path)
+global_mean = np.mean(global_data, axis=(0, 1), keepdims=True)
+global_std = np.std(global_data, axis=(0, 1), keepdims=True)
+global_scaler = Scaler(global_mean, global_std)
 
 
 def MAE_torch(pred, true, mask_value=None):
@@ -47,15 +74,15 @@ def MAE_torch(pred, true, mask_value=None):
     return torch.mean(mae_loss)
 
 
-def scaler_mae_loss(scaler=None, mask_value=None):
+def scaler_mae_loss(scaler, mask_value=None):
     def loss(preds, labels, mask=None):
-        if scaler is not None:
-            preds = scaler.inverse_transform(preds)
-            labels = scaler.inverse_transform(labels)
+        preds_norm = scaler.transform(preds)
+        labels_norm = scaler.transform(labels)
         if mask is not None:
-            preds = preds * mask
-            labels = labels * mask
-        mae = MAE_torch(pred=preds, true=labels, mask_value=mask_value)
+            mask = mask.to(torch.bool)
+            preds_norm = torch.masked_select(preds_norm, mask)
+            labels_norm = torch.masked_select(labels_norm, mask)
+        mae = MAE_torch(pred=preds_norm, true=labels_norm, mask_value=mask_value)
         return mae
     return loss
 
@@ -403,7 +430,7 @@ class STLlamaForCausalLM(LlamaForCausalLM):
             shift_labels = labels[..., 1:].contiguous()
             # Flatten the tokens
             loss_fct = CrossEntropyLoss()
-            rec_loss = scaler_mae_loss(scaler=None, mask_value=None)
+            rec_loss = scaler_mae_loss(global_scaler, mask_value=0.0)
             bce_loss = BCEWithLogitsLoss()
             shift_logits = shift_logits.view(-1, self.config.vocab_size)
             shift_labels = shift_labels.view(-1)
@@ -424,26 +451,27 @@ class STLlamaForCausalLM(LlamaForCausalLM):
             classificate_result_list = []
             for i in range(batch_size):
                 task_type = task_type_all[i]
-                # classification
-                if task_type == 3 or task_type == 4:
-                    classificate_idx_list.append(i)
-                    regress_result_list.append(st_pre_final[i:i + 1, ...].detach())
-                    classificate_result_list.append(st_pre_final[i:i + 1, ...])
-                # regression
-                else:
-                    regress_idx_list.append(i)
-                    classificate_result_list.append(st_pre_final[i:i + 1, ...].detach())
-                    regress_result_list.append(st_pre_final[i:i + 1, ...])
+                # # classification
+                # if task_type == 3 or task_type == 4:
+                #     classificate_idx_list.append(i)
+                #     regress_result_list.append(st_pre_final[i:i + 1, ...].detach())
+                #     classificate_result_list.append(st_pre_final[i:i + 1, ...])
+                # # regression
+                # else:
+                regress_idx_list.append(i)
+                classificate_result_list.append(st_pre_final[i:i + 1, ...].detach())
+                regress_result_list.append(st_pre_final[i:i + 1, ...])
             regress_result = torch.cat(regress_result_list, dim=0)
             classificate_result = torch.cat(classificate_result_list, dim=0)
 
             loss_regress = rec_loss(regress_result, labels_stpre)
+            # print(f'pre: {regress_result[0,0,:,0]}\ntrue: {labels_stpre[0,0,:,0]}')
             labels_classificate = labels_stpre
             labels_classificate[labels_classificate >= 1] = 1
             labels_classificate[labels_classificate < 1] = 0
             loss_classificate = bce_loss(classificate_result, labels_classificate)
-
-            loss = loss_fct(shift_logits, shift_labels) + loss_regress + loss_classificate
+            loss = loss_fct(shift_logits, shift_labels) + loss_regress
+            # print(f'llm: {loss_fct(shift_logits, shift_labels)}\nreg: {loss_regress}')
 
         if not return_dict:
             # print('not return dict')
