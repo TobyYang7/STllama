@@ -5,7 +5,7 @@ st_data_path=./data/discharge/st_data.pkl
 pretra_ste=ST_Encoder
 output_model=./checkpoints/UrbanGPT
 
-# wandb offline
+wandb online
 python urbangpt/train/train_mem.py \
     --model_name_or_path ${model_path} \
     --version v1 \
@@ -21,14 +21,14 @@ python urbangpt/train/train_mem.py \
     --num_train_epochs 3 \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 4 \
-    --gradient_accumulation_steps 8 \
+    --gradient_accumulation_steps 2 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
-    --save_steps 4800 \
+    --save_steps 3000 \
     --save_total_limit 1 \
-    --learning_rate 2e-3 \
+    --learning_rate 5e-3 \
     --weight_decay 0. \
-    --warmup_ratio 0.03 \
+    --warmup_ratio 0.01 \
     --lr_scheduler_type "cosine" \
     --logging_steps 1 \
     --tf32 False \

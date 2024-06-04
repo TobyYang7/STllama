@@ -74,7 +74,7 @@ def MAE_torch(pred, true, mask_value=None):
     return torch.mean(mae_loss)
 
 
-def scaler_mae_loss(scaler=None, mask_value=None):
+def scaler_mae_loss(scaler, mask_value=None):
     def loss(preds, labels, mask=None):
         preds_norm = scaler.transform(preds)
         labels_norm = scaler.transform(labels)
@@ -430,7 +430,7 @@ class STLlamaForCausalLM(LlamaForCausalLM):
             shift_labels = labels[..., 1:].contiguous()
             # Flatten the tokens
             loss_fct = CrossEntropyLoss()
-            rec_loss = scaler_mae_loss(scaler=None, mask_value=None)#todo
+            rec_loss = scaler_mae_loss(global_scaler, mask_value=0.0)
             bce_loss = BCEWithLogitsLoss()
             shift_logits = shift_logits.view(-1, self.config.vocab_size)
             shift_labels = shift_labels.view(-1)
@@ -465,13 +465,13 @@ class STLlamaForCausalLM(LlamaForCausalLM):
             classificate_result = torch.cat(classificate_result_list, dim=0)
 
             loss_regress = rec_loss(regress_result, labels_stpre)
-            print(f'pre: {regress_result[0,0,:,0]}\ntrue: {labels_stpre[0,0,:,0]}')
+            # print(f'pre: {regress_result[0,0,:,0]}\ntrue: {labels_stpre[0,0,:,0]}')
             labels_classificate = labels_stpre
             labels_classificate[labels_classificate >= 1] = 1
             labels_classificate[labels_classificate < 1] = 0
             loss_classificate = bce_loss(classificate_result, labels_classificate)
             loss = loss_fct(shift_logits, shift_labels) + loss_regress
-            print(f'llm: {loss_fct(shift_logits, shift_labels)}\nreg: {loss_regress}')
+            # print(f'llm: {loss_fct(shift_logits, shift_labels)}\nreg: {loss_regress}')
 
         if not return_dict:
             # print('not return dict')

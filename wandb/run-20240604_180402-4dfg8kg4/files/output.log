@@ -1,0 +1,30 @@
+  0%|                                                                                                                                    | 0/10449 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "urbangpt/train/train_mem.py", line 29, in <module>
+    train()
+  File "/root/autodl-tmp/STllama/urbangpt/train/train_st.py", line 821, in train
+    trainer.train()
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 1591, in train
+    return inner_training_loop(
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 1892, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 2776, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 2801, in compute_loss
+    outputs = model(**inputs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/accelerate/utils/operations.py", line 822, in forward
+    return model_forward(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/accelerate/utils/operations.py", line 810, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/amp/autocast_mode.py", line 14, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/root/autodl-tmp/STllama/urbangpt/model/STLlama.py", line 460, in forward
+    loss_regress = rec_loss(regress_result, labels_stpre)
+  File "/root/autodl-tmp/STllama/urbangpt/model/STLlama.py", line 72, in loss
+    preds_norm = scaler.transform(preds)
+  File "/root/autodl-tmp/STllama/urbangpt/model/STLlama.py", line 48, in transform
+    return ((data - self.mean) / self.std).cpu()
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/_tensor.py", line 970, in __array__
+    return self.numpy()
+TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.

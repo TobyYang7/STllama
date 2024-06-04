@@ -1,0 +1,67 @@
+
+  0%|                                                | 0/10449 [00:00<?, ?it/s]
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.300537109375+260.09912109375+0.7560268640518188---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.336772918701172+24.895498275756836+0.7035914659500122---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.201068878173828+1343.421875+0.7537064552307129---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.305638313293457+75.92672729492188+0.7271386981010437---
+
+  0%|                                     | 1/10449 [00:06<19:06:47,  6.59s/it]
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.3144917488098145+4037.845703125+0.7630037665367126---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.270931720733643+136.2784423828125+0.7858147621154785---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.402022361755371+54.43560028076172+0.7252532243728638---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.447452068328857+12.90009880065918+0.7371260523796082---
+
+  0%|                                     | 2/10449 [00:12<17:57:36,  6.19s/it]
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.4841179847717285+230.92539978027344+0.7720786333084106---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.3576788902282715+465.971435546875+0.7349050045013428---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.246530532836914+460.35296630859375+0.705878496170044---
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+---loss:7.180072784423828+153.0894012451172+0.7746787071228027---
+{'loss': 335.6488, 'learning_rate': 1.2738853503184714e-05, 'epoch': 0.0}
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+
+  0%|                                     | 3/10449 [00:18<17:22:55,  5.99s/it]
+---pre:torch.Size([4, 1, 12, 2])
+true:torch.Size([4, 1, 12, 2])---
+  0%|                                     | 3/10449 [00:18<17:22:55,  5.99s/it]Traceback (most recent call last):
+  File "urbangpt/train/train_mem.py", line 29, in <module>
+    train()
+  File "/root/autodl-tmp/STllama/urbangpt/train/train_st.py", line 821, in train
+    trainer.train()
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 1591, in train
+    return inner_training_loop(
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 1892, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 2787, in training_step
+    self.accelerator.backward(loss)
+  File "/root/miniconda3/lib/python3.8/site-packages/accelerate/accelerator.py", line 2121, in backward
+    self.scaler.scale(loss).backward(**kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

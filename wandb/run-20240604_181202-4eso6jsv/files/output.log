@@ -1,0 +1,483 @@
+
+  0%|                                                                                                                                    | 0/10449 [00:00<?, ?it/s]
+pre: tensor([ 0.7871, -0.8760,  0.5405, -0.5054, -0.1598, -0.3516,  0.3018,  0.3694,
+        -0.1025,  0.4155, -0.2363, -0.7002], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([118.0000,  63.5000,  43.7500,  32.5000,  26.1250,  21.7500,  19.5000,
+         16.3750,  16.7500,  56.0000, 247.0000, 135.0000], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.478412628173828
+reg: 1.006404995918274
+pre: tensor([ 0.8999, -0.0620,  0.7715, -0.2437,  0.6030, -0.6582, -0.3254,  0.0235,
+        -0.5098, -0.5127, -0.1494,  0.1375], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 51., 156., 107.,  43.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 7.682552814483643
+reg: 1.1049580574035645
+pre: tensor([ 0.7959, -0.0985,  0.6025,  0.3010, -0.0009,  0.2900,  0.0181,  0.4209,
+        -0.2300, -0.6895,  0.0448,  0.0053], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([29., 39., 35., 31., 27., 26., 32., 41., 39., 33., 29., 29.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.809120178222656
+reg: 2.1003293991088867
+pre: tensor([ 0.8521, -0.7075,  0.5737, -0.1503,  0.1893, -0.7061,  0.4365,  0.6206,
+        -0.3533,  0.4561, -0.7217, -0.0550], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([  0.0000,   0.0000,   0.0000,   0.0000,   0.0000,  23.2500,  11.3125,
+          8.3750,  11.5000, 704.0000,  93.5000,  56.7500], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.333894729614258
+reg: 2.151813507080078
+
+  0%|                                                                                                                         | 1/10449 [00:06<19:04:24,  6.57s/it]
+pre: tensor([ 0.5332, -0.1145,  0.4153,  0.2871,  0.2129, -0.0900,  0.1326,  0.1071,
+        -1.0264, -0.0762, -0.6567, -0.2218], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 66.0000, 206.0000, 258.0000, 171.0000, 199.0000,  99.0000, 382.0000,
+         44.2500,  59.2500,  50.0000,  39.2500,  37.5000], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.536942481994629
+reg: 2.295168399810791
+pre: tensor([ 2.2803e-01, -4.0967e-01,  4.0942e-01,  3.2129e-01,  2.4426e-01,
+        -3.4863e-01, -6.6211e-01, -2.3782e-04, -3.4106e-01, -2.2754e-01,
+        -6.5332e-01,  6.3184e-01], device='cuda:0', dtype=torch.float16,
+       grad_fn=<SelectBackward0>)
+true: tensor([146., 274., 187., 137., 102.,  77., 102., 164., 152., 144., 135., 133.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.345998764038086
+reg: 1.1204959154129028
+pre: tensor([ 0.7026, -0.4412,  0.3638, -0.7446,  0.0925, -0.7764,  0.5732,  0.2295,
+        -0.2487,  0.7368, -0.3491, -0.2883], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.454782485961914
+reg: 0.7095162272453308
+pre: tensor([ 1.1104, -0.3054,  0.4695,  0.0729,  0.0355, -0.0989, -0.4141,  0.0374,
+        -0.5308,  0.0732, -0.6235, -0.0840], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([  6.6250,   3.4531,   3.3750,   1.3906,   3.0625,   3.2344,   1.3125,
+          1.3516,   1.3984,   2.5625, 290.0000,  42.2500], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 7.127871990203857
+reg: 1.7404541969299316
+
+  0%|                                                                                                                         | 2/10449 [00:12<17:58:05,  6.19s/it]
+pre: tensor([ 0.5488, -0.4724,  0.1489,  0.0065, -0.1418, -0.0040, -0.4465,  0.5244,
+        -0.1943, -0.1273, -0.1581,  0.1549], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([  2.2656,   3.5625,   4.4688,   4.3750,   2.5781,   3.1406, 356.0000,
+        205.0000,  52.5000,  39.2500,  23.5000,  28.1250], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.087794303894043
+reg: 1.207757592201233
+pre: tensor([ 0.7559, -0.0535,  0.1476,  0.0752, -0.1128, -0.2642, -0.3618,  0.6035,
+         0.0819, -0.1376, -0.4766,  0.1904], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.5169095993042
+reg: 1.1527376174926758
+pre: tensor([ 0.6758,  0.2830,  0.7739, -0.1558,  0.7876, -0.8447, -0.0549, -0.0973,
+        -0.5557, -0.0696, -0.4585, -0.3005], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([27., 28., 28., 23., 20., 20., 20., 21., 23., 24., 24., 24.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.359952926635742
+reg: 1.1972832679748535
+pre: tensor([-0.0107, -0.2306,  0.5850,  0.4329,  0.3716, -0.2362, -0.6099,  0.0305,
+        -0.5415,  0.0540, -0.6064,  0.3643], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([36., 36., 44., 52., 60., 60., 59., 57., 57., 70., 58., 67.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.988140106201172
+reg: 0.9056157469749451
+{'loss': 9.604, 'learning_rate': 1.2738853503184714e-05, 'epoch': 0.0}
+pre: tensor([ 0.8965, -0.0904, -0.3840,  0.0362,  0.0274, -0.3838, -0.1500,  0.1147,
+         0.3186, -0.2341,  0.1743,  0.0584], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 16.,  71., 121.,  66.,  28.,  17.,  18.,  17.,  17.,  26.,  20.,  18.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.111032485961914
+
+  0%|                                                                                                                         | 3/10449 [00:18<17:23:17,  5.99s/it]
+pre: tensor([ 0.5386, -0.5503,  0.5610, -0.2083,  0.4790, -0.2585,  0.1932,  0.4617,
+        -0.9082,  0.4707, -0.5527,  0.0845], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([158.,  63.,  35.,  24.,  18.,  17.,  16.,  15.,  14.,  13.,  12.,  11.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.145301818847656
+reg: 1.28598952293396
+pre: tensor([ 0.2069, -0.4978,  0.3784,  0.3193, -0.2010, -0.0422, -0.3157, -0.2827,
+         0.1366, -0.3594, -0.2230, -0.0687], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([166., 145., 125., 105.,  86.,  66.,  47.,  39.,  48.,  48.,  98., 138.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.820030212402344
+reg: 0.9828857183456421
+pre: tensor([ 0.6519, -0.2773,  0.0293,  0.0701, -0.1375,  0.0909, -0.2700,  0.4585,
+        -0.0486, -0.1493,  0.0101, -0.0713], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.479042053222656
+reg: 0.5385807156562805
+{'loss': 9.5729, 'learning_rate': 1.9108280254777068e-05, 'epoch': 0.0}
+pre: tensor([ 0.6558, -0.0474,  1.5820,  0.0564,  0.2507, -0.3618,  0.6230, -0.8735,
+        -1.2695,  0.2622, -1.0156,  0.0667], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([28., 27., 27., 26., 26., 28., 29., 31., 32., 33., 35., 33.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 7.4446187019348145
+
+  0%|                                                                                                                         | 4/10449 [00:24<17:07:31,  5.90s/it]
+pre: tensor([ 0.2404, -0.2379,  0.6934,  0.3242,  0.6714, -0.5840, -0.2115, -0.0008,
+        -0.3655, -0.1584, -0.4041, -0.0782], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 89.,  59.,  43.,  83., 215., 272., 228., 185., 151., 122.,  95.,  71.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 9.181563377380371
+reg: 1.2572015523910522
+pre: tensor([ 0.4922,  0.2483, -0.4998,  0.3176, -0.1334,  0.1528,  0.1741, -0.0314,
+         0.2490, -0.1204, -0.8062, -0.0029], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 44.,  44.,  41.,  39.,  38.,  38.,  38.,  55.,  78., 101., 118., 102.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: nan
+reg: nan
+pre: tensor([ 0.5522, -0.3345,  0.5718,  1.1357, -0.1317, -0.3059, -0.4084,  0.1528,
+        -0.0951, -0.4761, -0.1469,  0.0479], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([45.2500, 45.2500, 45.2500, 45.2500, 36.2500, 43.2500, 41.0000, 42.0000,
+        40.0000, 43.2500, 33.5000, 42.2500], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.554430961608887
+reg: 1.187532663345337
+{'loss': 12.3432, 'learning_rate': 1.9108280254777068e-05, 'epoch': 0.0}
+pre: tensor([ 0.0652,  0.5298,  0.7104,  0.3186, -0.6479, -0.5850, -0.3904, -0.0064,
+        -0.9175, -0.0889, -0.9604, -0.3354], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 35.,  26.,  23., 124., 137.,  89.,  58.,  38., 256., 426., 250., 201.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.0343599319458
+
+  0%|                                                                                                                         | 5/10449 [00:29<17:11:16,  5.92s/it]
+pre: tensor([ 1.0801, -0.5742,  0.5122, -0.3501,  0.2294, -0.4219, -0.5410,  0.6802,
+        -0.3184,  0.5171, -1.2568,  0.2018], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([  4.8125,   3.4844,   5.0625,   6.1875,   4.6562,   2.8594,   2.6406,
+          2.5625,   3.1719,   1.3438,   2.0000, 330.0000], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 7.228496551513672
+reg: 1.7190486192703247
+pre: tensor([ 0.4648, -0.0425,  0.5352, -0.5352,  0.8599, -0.4702,  0.0712,  0.1902,
+        -1.0693,  0.4949, -0.8208, -0.1848], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([11.5000, 15.1875, 14.1250, 14.4375,  7.4688,  4.1875,  9.8750, 34.7500,
+        27.0000, 22.2500, 20.1250, 13.0625], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 7.2616801261901855
+reg: 1.8043105602264404
+pre: tensor([ 0.6133, -0.3904, -0.3301,  0.1326,  0.8003, -0.7695,  0.1952, -0.0226,
+        -0.5601, -0.0530, -0.9146,  0.0223], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([190., 158., 139., 178., 147., 111.,  84.,  66.,  56.,  50.,  45.,  41.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.511770248413086
+reg: 1.329237461090088
+{'loss': 9.4511, 'learning_rate': 2.5477707006369428e-05, 'epoch': 0.0}
+pre: tensor([ 0.6597,  0.1337,  0.2427,  0.5767,  0.6099, -0.4248, -0.3018,  0.5298,
+        -1.0273,  0.0706, -1.1113,  0.1771], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 7.757427215576172
+
+  0%|                                     | 6/10449 [00:36<17:17:36,  5.96s/it]
+pre: tensor([ 0.8096,  0.0028,  0.3223,  0.4675, -0.0251,  0.1478,  0.0871,  0.5127,
+         0.2268, -0.3357, -0.9487, -0.1783], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 9.6250,  0.0000,  0.0000,  0.0000,  0.0000,  8.0000, 10.5000,  8.3750,
+        11.0000,  0.0000,  0.0000,  0.0000], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.7949857711792
+reg: 1.5498790740966797
+pre: tensor([ 1.0547,  0.0663,  0.6382,  0.7168,  0.1472,  0.3655, -0.3914,  0.1393,
+        -0.2620, -0.2930, -0.2578,  0.1379], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 72.,  68.,  64.,  60.,  66., 206., 296., 262., 228., 214., 272., 232.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.450671195983887
+
+  0%|                                     | 7/10449 [00:41<17:09:45,  5.92s/it]
+pre: tensor([ 0.5093, -0.7822,  0.1148, -0.1831,  0.6626, -0.5039,  0.2944,  0.2952,
+        -1.0459,  0.5923, -0.2527,  0.0482], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 0.,  0.,  0.,  0.,  0., 14.,  0.,  0.,  0.,  0.,  0.,  0.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 6.972296237945557
+reg: 1.2937973737716675
+{'loss': 9.3018, 'learning_rate': 3.184713375796179e-05, 'epoch': 0.0}
+pre: tensor([ 0.8501, -0.2732,  0.8477, -0.7036,  0.3774,  0.0058,  0.1622,  0.2725,
+        -0.6641,  0.3540, -0.2137, -0.2103], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 9.019017219543457
+reg: 1.2566688060760498
+pre: tensor([ 0.0734, -0.0891,  0.4353,  0.2822, -0.0196, -0.3228,  0.0334, -0.0925,
+        -0.1534, -0.1858, -0.9136,  0.7427], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([  0.0000,   0.0000,  65.0000,  67.0000,  70.0000,  65.5000,  23.2500,
+        100.5000,  68.5000,  45.2500,  64.5000,  23.3750], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 7.893336296081543
+reg: 0.7068061232566833
+pre: tensor([ 0.5947, -0.4570,  0.5396, -0.0580,  0.7119, -0.5039, -0.0982,  0.4175,
+        -0.4341,  0.4827, -0.2292, -0.4875], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 8.087158203125
+
+  0%|                                     | 8/10449 [00:47<17:12:53,  5.94s/it]
+pre: tensor([ 0.8740, -0.1031,  0.6216, -0.7153,  0.8413, -0.2080, -0.1070,  0.1915,
+        -0.6934,  0.5483, -0.8105,  0.1401], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([13.,  8.,  5.,  3.,  3.,  3.,  3.,  3.,  3.,  3.,  3.,  3.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 8.194348335266113
+reg: 0.8390108346939087
+{'loss': 9.1511, 'learning_rate': 3.8216560509554137e-05, 'epoch': 0.0}
+pre: tensor([ 0.4746, -0.7988,  0.6797,  0.2330,  0.1982, -0.3008,  0.5195,  0.6094,
+        -0.3582,  0.5532, -0.2095, -0.6001], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 72., 242., 198., 135., 134., 184., 288., 340., 280., 225., 180., 149.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 7.456806182861328
+reg: 1.5429960489273071
+pre: tensor([ 5.6836e-01,  3.1763e-01,  4.4971e-01,  4.5654e-01,  3.6133e-02,
+         2.8223e-01,  4.8685e-04,  5.6396e-01,  1.9092e-01,  4.5380e-02,
+        -3.2397e-01, -1.5552e-01], device='cuda:0', dtype=torch.float16,
+       grad_fn=<SelectBackward0>)
+true: tensor([  9.1875,  11.1250,   7.9375,   5.3125,   7.0312,  11.7500,   4.8438,
+          6.7188,  15.8750, 212.0000, 133.0000,  42.2500], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 7.110348224639893
+reg: 1.159488558769226
+pre: tensor([ 0.1482, -0.7368,  0.6924,  0.1069,  0.9810, -0.5410,  0.0771,  0.0746,
+        -0.1517,  0.9805,  0.1426, -0.5005], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 57.0000,  62.0000,  70.5000,  70.5000,  71.0000,  90.5000,  66.0000,
+         71.0000, 101.5000,  58.2500,  47.5000,  50.5000], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 7.623104572296143
+reg: 0.8279653191566467
+pre: tensor([ 4.6948e-01,  3.7720e-01,  5.4736e-01,  3.9478e-01,  4.2578e-01,
+         5.0964e-02,  1.7130e-04,  4.4775e-01, -2.2644e-01,  1.6309e-01,
+        -6.4844e-01,  9.6680e-02], device='cuda:0', dtype=torch.float16,
+       grad_fn=<SelectBackward0>)
+true: tensor([64., 56., 47., 43., 45., 49., 50., 49., 55., 89., 88., 80.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 7.929070949554443
+
+  0%|                                     | 9/10449 [00:53<17:10:18,  5.92s/it]
+{'loss': 8.6671, 'learning_rate': 4.458598726114649e-05, 'epoch': 0.0}
+pre: tensor([ 0.2800, -0.2494,  0.4453,  0.2189,  0.3596,  0.6392, -0.2534,  0.4341,
+        -0.1076, -0.0024, -0.9126, -0.2428], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([49., 46., 44., 42., 40., 40., 63., 73., 71., 73., 80., 64.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 7.2294921875
+reg: 1.1950147151947021
+pre: tensor([ 1.1289, -0.7358,  0.5400, -0.1654,  0.6040,  0.2062, -0.4431,  0.6938,
+        -0.1553,  0.1611, -1.0820,  0.2822], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 6.5283522605896
+reg: 3.8883841037750244
+pre: tensor([ 0.1793, -0.1201,  0.5308,  0.0562,  0.4368, -0.0131, -0.3772,  0.3140,
+         0.0630,  0.1398, -1.0449,  1.0801], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([229., 254., 380., 316., 249., 206., 177., 148., 127., 107.,  89.,  77.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 7.72119140625
+reg: 2.290693759918213
+pre: tensor([ 0.9648, -0.2357, -0.2808,  0.3252,  0.0236,  0.0213,  0.2002,  0.4573,
+         0.1566, -0.2219, -0.5308,  0.4971], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 87.,  77.,  66.,  76., 201., 488., 366., 243., 132.,  95.,  80.,  74.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 7.5793585777282715
+
+  0%|                                    | 10/10449 [00:59<17:10:38,  5.92s/it]
+{'loss': 9.5242, 'learning_rate': 5.0955414012738855e-05, 'epoch': 0.0}
+pre: tensor([ 1.2598, -0.1787,  0.6709, -0.3079,  0.9575, -0.0796,  0.2134,  0.4521,
+        -0.8545,  0.7002, -0.3147,  0.0686], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([20., 21., 22., 23., 24., 23., 21., 20., 19., 18., 17., 17.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 6.793771743774414
+reg: nan
+pre: tensor([ 0.8076, -0.0129,  0.5190, -0.1567,  0.3569, -0.3318,  0.1360,  0.5273,
+        -0.5562,  0.5137, -1.0029,  0.1970], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([27.2500, 19.5000, 15.1250, 23.1250, 11.6875, 10.5000, 11.6875, 10.1250,
+         0.0000,  9.3125,  9.1250,  7.0000], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 6.9233269691467285
+reg: 1.0084755420684814
+pre: tensor([ 0.6006,  0.8130,  0.7812, -0.2551, -0.0092,  0.1903,  0.2025,  0.1047,
+        -0.4954,  0.4294, -0.1586,  0.2350], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([276., 223., 170., 238., 198., 113.,  62.,  45.,  34.,  23.,  16.,  23.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 6.744879245758057
+reg: 1.5263413190841675
+pre: tensor([ 0.9893,  0.3845,  0.3223,  0.0966,  1.4375, -0.3757,  0.1165,  0.7002,
+        -0.8799,  0.1843, -0.7725, -0.1600], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([18., 18., 18., 21., 32., 43., 40., 37., 35., 33., 31., 29.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 7.0731520652771
+
+  0%|                                    | 11/10449 [01:05<17:03:35,  5.88s/it]
+{'loss': 6.161, 'learning_rate': 5.732484076433121e-05, 'epoch': 0.0}
+pre: tensor([ 0.9375,  0.0555,  0.7710,  0.5439,  0.3899,  0.6753, -0.0864,  0.7051,
+         0.2173, -0.7080, -0.2952, -0.0215], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([23.0000, 17.0000, 28.5000, 40.0000, 39.7500, 39.7500, 30.6250, 21.0000,
+        18.3750, 17.5000, 14.9375, 18.7500], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 6.605352878570557
+reg: 1.9382613897323608
+pre: tensor([ 0.5869,  0.3003,  1.2441,  0.8413,  0.2173, -0.6426,  0.2191,  0.5449,
+         0.2693, -0.2430, -0.3684, -0.0873], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 59.,  55.,  52.,  50.,  45.,  40., 147., 172.,  79.,  55.,  46.,  39.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 6.948113918304443
+reg: 0.9443761706352234
+pre: tensor([ 0.6187, -0.0388,  0.4412,  0.8140,  0.8911, -0.7510,  0.1967,  0.0886,
+        -0.1333, -0.0393, -0.8213, -0.0176], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([116.,  91.,  74.,  58.,  50.,  45.,  40.,  39.,  38.,  38.,  38.,  38.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 6.606740951538086
+reg: 0.928837239742279
+pre: tensor([ 0.8369, -0.7261,  0.7334, -0.0357,  0.6816, -0.2708,  0.4241,  0.1389,
+        -0.2639,  0.6274, -0.5830,  0.2527], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 6.339695930480957
+
+  0%|                                    | 12/10449 [01:11<17:11:04,  5.93s/it]
+{'loss': 7.7676, 'learning_rate': 6.369426751592357e-05, 'epoch': 0.0}
+pre: tensor([ 0.9238, -0.3628,  0.2115, -0.3660,  0.9062, -0.4519,  0.4285,  0.1794,
+        -0.5640,  1.0117, -0.5869,  0.0963], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0',
+       dtype=torch.bfloat16)
+llm: 6.1006245613098145
+reg: 1.0749356746673584
+pre: tensor([ 0.3406,  0.0069,  0.6787,  0.3628,  0.4910, -0.0286, -0.3477,  0.1755,
+        -0.2194,  0.1283, -0.4773,  0.3989], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([268., 103.,  81.,  75.,  69.,  61.,  54.,  46.,  40.,  40.,  39.,  39.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 6.3356032371521
+reg: 0.9250966906547546
+pre: tensor([ 1.1475,  0.3484,  1.2471, -0.3032,  1.0771, -0.0376,  0.0547,  0.7520,
+        -1.2227,  0.6753, -0.7690,  0.3367], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 50.,  51.,  49.,  47.,  45., 129., 408., 284., 114.,  58.,  45.,  42.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 5.938971042633057
+reg: 1.4297620058059692
+pre: tensor([ 0.4163,  0.2299,  0.8364,  0.4233,  0.6987,  0.0544,  0.2676,  0.3745,
+        -0.1061, -0.2878, -0.2411, -0.0210], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([86., 61., 51., 60., 50., 54., 48., 42., 38., 39., 45., 42.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 6.6389994621276855
+
+  0%|                                    | 13/10449 [01:17<17:15:01,  5.95s/it]
+{'loss': 7.3152, 'learning_rate': 7.006369426751592e-05, 'epoch': 0.0}
+pre: tensor([ 0.8438,  0.5669, -0.1652,  0.1229,  0.9004, -0.2147,  0.4006,  0.3613,
+         0.2900,  1.0488, -0.8623, -0.0045], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([148., 146., 103.,  83.,  62.,  51.,  41.,  33.,  45., 268., 280., 230.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 6.0395894050598145
+reg: 2.7001965045928955
+pre: tensor([ 1.2119,  0.4358,  1.2764, -0.4023,  0.6553, -0.0827,  0.2423,  0.5562,
+        -0.0660,  0.8438, -0.6587,  0.5347], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([57., 55., 55., 55., 51., 41., 34., 62., 93., 77., 58., 57.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 5.674801349639893
+reg: 1.0249927043914795
+pre: tensor([ 0.1235,  0.3533,  0.8452,  0.4426, -0.0974, -0.0286,  0.0511,  0.4517,
+         0.1562, -0.0059, -0.1110,  0.3230], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([ 58.,  44.,  43.,  95., 129.,  84.,  60.,  52.,  49.,  45.,  42.,  39.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 5.916690349578857
+reg: 1.1521281003952026
+pre: tensor([ 1.4805,  0.2083,  1.2578,  0.2057,  0.6704,  0.2754,  0.0256,  0.3030,
+        -0.3108,  0.8486, -0.5498,  0.5522], device='cuda:0',
+       dtype=torch.float16, grad_fn=<SelectBackward0>)
+true: tensor([17., 17., 16., 16., 16., 16., 15., 16., 17., 17., 18., 19.],
+       device='cuda:0', dtype=torch.bfloat16)
+llm: 5.4482903480529785
+  0%|                                    | 14/10449 [01:23<17:20:10,  5.98s/it]Traceback (most recent call last):
+  File "urbangpt/train/train_mem.py", line 29, in <module>
+    train()
+  File "/root/autodl-tmp/STllama/urbangpt/train/train_st.py", line 821, in train
+    trainer.train()
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 1591, in train
+    return inner_training_loop(
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 1892, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 2776, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/trainer.py", line 2801, in compute_loss
+    outputs = model(**inputs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/accelerate/utils/operations.py", line 822, in forward
+    return model_forward(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/accelerate/utils/operations.py", line 810, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/amp/autocast_mode.py", line 14, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/root/autodl-tmp/STllama/urbangpt/model/STLlama.py", line 387, in forward
+    outputs = self.model(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/STllama/urbangpt/model/STLlama.py", line 313, in forward
+    return super(STLlamaModel, self).forward(
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/models/llama/modeling_llama.py", line 921, in forward
+    layer_outputs = torch.utils.checkpoint.checkpoint(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/utils/checkpoint.py", line 249, in checkpoint
+    return CheckpointFunction.apply(function, preserve, *args)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/autograd/function.py", line 506, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/utils/checkpoint.py", line 107, in forward
+    outputs = run_function(*args)
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/models/llama/modeling_llama.py", line 917, in custom_forward
+    return module(*inputs, past_key_value, output_attentions, padding_mask=padding_mask)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/models/llama/modeling_llama.py", line 648, in forward
+    hidden_states = self.post_attention_layernorm(hidden_states)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/transformers/models/llama/modeling_llama.py", line 111, in forward
+    variance = hidden_states.pow(2).mean(-1, keepdim=True)
+KeyboardInterrupt
+{'loss': 7.3915, 'learning_rate': 7.643312101910827e-05, 'epoch': 0.0}

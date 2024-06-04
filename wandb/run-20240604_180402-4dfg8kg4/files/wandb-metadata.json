@@ -1,0 +1,506 @@
+{
+    "os": "Linux-5.4.0-99-generic-x86_64-with-glibc2.17",
+    "python": "3.8.10",
+    "heartbeatAt": "2024-06-04T10:04:03.788186",
+    "startedAt": "2024-06-04T10:04:02.749536",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--model_name_or_path",
+        "./checkpoints/vicuna-7b-v1.5-16k",
+        "--version",
+        "v1",
+        "--data_path",
+        "./data/discharge/st_gpt.json",
+        "--st_content",
+        "./TAXI.json",
+        "--st_data_path",
+        "./data/discharge/st_data.pkl",
+        "--st_tower",
+        "ST_Encoder",
+        "--tune_st_mlp_adapter",
+        "True",
+        "--st_select_layer",
+        "-2",
+        "--use_st_start_end",
+        "--fp16",
+        "True",
+        "--output_dir",
+        "./checkpoints/UrbanGPT",
+        "--num_train_epochs",
+        "3",
+        "--per_device_train_batch_size",
+        "4",
+        "--per_device_eval_batch_size",
+        "4",
+        "--gradient_accumulation_steps",
+        "4",
+        "--evaluation_strategy",
+        "no",
+        "--save_strategy",
+        "steps",
+        "--save_steps",
+        "4800",
+        "--save_total_limit",
+        "1",
+        "--learning_rate",
+        "2e-3",
+        "--weight_decay",
+        "0.",
+        "--warmup_ratio",
+        "0.03",
+        "--lr_scheduler_type",
+        "cosine",
+        "--logging_steps",
+        "1",
+        "--tf32",
+        "False",
+        "--model_max_length",
+        "2048",
+        "--gradient_checkpointing",
+        "True",
+        "--lazy_preprocess",
+        "True",
+        "--report_to",
+        "wandb"
+    ],
+    "state": "running",
+    "program": "urbangpt/train/train_mem.py",
+    "codePathLocal": "urbangpt/train/train_mem.py",
+    "codePath": "urbangpt/train/train_mem.py",
+    "git": {
+        "remote": "https://github.com/TobyYang7/STllama.git",
+        "commit": "8448b7de864dfbd0a2e72588f50828d5093a4b50"
+    },
+    "email": "tobyyang7@foxmail.com",
+    "root": "/root/autodl-tmp/STllama",
+    "host": "autodl-container-7bda11a2fa-d300d1c6",
+    "username": "root",
+    "executable": "/root/miniconda3/bin/python",
+    "cpu_count": 40,
+    "cpu_count_logical": 80,
+    "cpu_freq": {
+        "current": 3000.0279999999975,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3000.028,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 30.0,
+            "used": 22.363601684570312
+        }
+    },
+    "gpu": "Tesla V100S-PCIE-32GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla V100S-PCIE-32GB",
+            "memory_total": 34359738368
+        }
+    ],
+    "memory": {
+        "total": 629.8885612487793
+    }
+}

@@ -1,0 +1,934 @@
+2024-06-04 17:29:06,885 INFO    StreamThr :4673 [internal.py:wandb_internal():85] W&B internal server running at pid: 4673, started at: 2024-06-04 17:29:06.884297
+2024-06-04 17:29:06,888 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status
+2024-06-04 17:29:06,889 INFO    WriterThread:4673 [datastore.py:open_for_write():87] open: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/run-u72h5f7v.wandb
+2024-06-04 17:29:06,890 DEBUG   SenderThread:4673 [sender.py:send():378] send: header
+2024-06-04 17:29:06,975 DEBUG   SenderThread:4673 [sender.py:send():378] send: run
+2024-06-04 17:29:07,653 INFO    SenderThread:4673 [dir_watcher.py:__init__():211] watching files in: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files
+2024-06-04 17:29:07,653 INFO    SenderThread:4673 [sender.py:_start_run_threads():1123] run started: u72h5f7v with start time 1717493346.884293
+2024-06-04 17:29:07,664 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: check_version
+2024-06-04 17:29:07,664 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: check_version
+2024-06-04 17:29:07,795 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: run_start
+2024-06-04 17:29:07,805 DEBUG   HandlerThread:4673 [system_info.py:__init__():26] System info init
+2024-06-04 17:29:07,805 DEBUG   HandlerThread:4673 [system_info.py:__init__():41] System info init done
+2024-06-04 17:29:07,805 INFO    HandlerThread:4673 [system_monitor.py:start():194] Starting system monitor
+2024-06-04 17:29:07,806 INFO    SystemMonitor:4673 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-04 17:29:07,806 INFO    HandlerThread:4673 [system_monitor.py:probe():214] Collecting system info
+2024-06-04 17:29:07,808 INFO    SystemMonitor:4673 [interfaces.py:start():188] Started cpu monitoring
+2024-06-04 17:29:07,808 INFO    SystemMonitor:4673 [interfaces.py:start():188] Started disk monitoring
+2024-06-04 17:29:07,809 INFO    SystemMonitor:4673 [interfaces.py:start():188] Started gpu monitoring
+2024-06-04 17:29:07,810 INFO    SystemMonitor:4673 [interfaces.py:start():188] Started memory monitoring
+2024-06-04 17:29:07,810 INFO    SystemMonitor:4673 [interfaces.py:start():188] Started network monitoring
+2024-06-04 17:29:07,831 DEBUG   HandlerThread:4673 [system_info.py:probe():150] Probing system
+2024-06-04 17:29:07,837 DEBUG   HandlerThread:4673 [system_info.py:_probe_git():135] Probing git
+2024-06-04 17:29:07,848 DEBUG   HandlerThread:4673 [system_info.py:_probe_git():143] Probing git done
+2024-06-04 17:29:07,849 DEBUG   HandlerThread:4673 [system_info.py:probe():198] Probing system done
+2024-06-04 17:29:07,849 DEBUG   HandlerThread:4673 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-99-generic-x86_64-with-glibc2.17', 'python': '3.8.10', 'heartbeatAt': '2024-06-04T09:29:07.831380', 'startedAt': '2024-06-04T09:29:06.878332', 'docker': None, 'cuda': None, 'args': ('--model_name_or_path', './checkpoints/vicuna-7b-v1.5-16k', '--version', 'v1', '--data_path', './data/discharge/st_gpt.json', '--st_content', './TAXI.json', '--st_data_path', './data/discharge/st_data.pkl', '--st_tower', 'ST_Encoder', '--tune_st_mlp_adapter', 'True', '--st_select_layer', '-2', '--use_st_start_end', '--fp16', 'True', '--output_dir', './checkpoints/UrbanGPT', '--num_train_epochs', '3', '--per_device_train_batch_size', '4', '--per_device_eval_batch_size', '4', '--gradient_accumulation_steps', '4', '--evaluation_strategy', 'no', '--save_strategy', 'steps', '--save_steps', '4800', '--save_total_limit', '1', '--learning_rate', '2e-3', '--weight_decay', '0.', '--warmup_ratio', '0.03', '--lr_scheduler_type', 'cosine', '--logging_steps', '1', '--tf32', 'False', '--model_max_length', '2048', '--gradient_checkpointing', 'True', '--lazy_preprocess', 'True', '--report_to', 'wandb'), 'state': 'running', 'program': 'urbangpt/train/train_mem.py', 'codePathLocal': 'urbangpt/train/train_mem.py', 'codePath': 'urbangpt/train/train_mem.py', 'git': {'remote': 'https://github.com/TobyYang7/STllama.git', 'commit': '8448b7de864dfbd0a2e72588f50828d5093a4b50'}, 'email': 'tobyyang7@foxmail.com', 'root': '/root/autodl-tmp/STllama', 'host': 'autodl-container-7bda11a2fa-d300d1c6', 'username': 'root', 'executable': '/root/miniconda3/bin/python', 'cpu_count': 40, 'cpu_count_logical': 80, 'cpu_freq': {'current': 3000.0279999999975, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}, {'current': 3000.028, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 30.0, 'used': 20.303600311279297}}, 'gpu': 'Tesla V100S-PCIE-32GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}], 'memory': {'total': 629.8885612487793}}
+2024-06-04 17:29:07,849 INFO    HandlerThread:4673 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-04 17:29:07,849 INFO    HandlerThread:4673 [system_monitor.py:probe():227] Publishing system info
+2024-06-04 17:29:07,849 DEBUG   HandlerThread:4673 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-04 17:29:08,368 DEBUG   HandlerThread:4673 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-04 17:29:08,370 INFO    HandlerThread:4673 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-04 17:29:08,375 DEBUG   SenderThread:4673 [sender.py:send():378] send: files
+2024-06-04 17:29:08,375 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-06-04 17:29:08,531 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-04 17:29:08,531 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: python_packages
+2024-06-04 17:29:08,532 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:29:08,533 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:29:08,654 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/conda-environment.yaml
+2024-06-04 17:29:08,654 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-metadata.json
+2024-06-04 17:29:08,654 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/requirements.txt
+2024-06-04 17:29:08,943 DEBUG   SenderThread:4673 [sender.py:send():378] send: telemetry
+2024-06-04 17:29:08,943 DEBUG   SenderThread:4673 [sender.py:send():378] send: config
+2024-06-04 17:29:08,944 DEBUG   SenderThread:4673 [sender.py:send():378] send: metric
+2024-06-04 17:29:08,944 DEBUG   SenderThread:4673 [sender.py:send():378] send: telemetry
+2024-06-04 17:29:08,944 DEBUG   SenderThread:4673 [sender.py:send():378] send: telemetry
+2024-06-04 17:29:08,944 DEBUG   SenderThread:4673 [sender.py:send():378] send: metric
+2024-06-04 17:29:08,944 WARNING SenderThread:4673 [sender.py:send_metric():1340] Seen metric with glob (shouldn't happen)
+2024-06-04 17:29:08,977 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:29:08,977 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:29:08,978 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:29:09,653 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:10,262 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:29:10,263 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:29:10,263 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:29:11,654 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:12,214 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:29:12,654 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:12,855 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:29:12,856 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:29:12,856 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:29:12,856 INFO    wandb-upload_0:4673 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2731, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 647, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 547, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2762, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2731, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 647, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 547, in send
+    raise ConnectionError(err, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2024-06-04 17:29:14,655 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:15,118 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:29:15,120 DEBUG   SenderThread:4673 [sender.py:send():378] send: metric
+2024-06-04 17:29:15,121 DEBUG   SenderThread:4673 [sender.py:send():378] send: metric
+2024-06-04 17:29:15,121 DEBUG   SenderThread:4673 [sender.py:send():378] send: metric
+2024-06-04 17:29:15,121 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:29:15,122 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:29:15,123 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:29:15,655 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:29:16,656 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:17,656 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:17,956 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:29:17,956 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:29:17,956 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:29:18,203 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:29:18,657 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:20,658 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:21,065 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:29:21,066 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:29:21,067 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:29:21,068 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:29:21,659 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:29:22,659 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:23,532 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:29:23,533 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:29:23,660 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:23,799 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:29:24,660 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:26,661 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:26,805 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:29:26,807 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:29:26,807 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:29:26,809 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:29:27,342 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:29:27,342 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:29:27,342 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:29:27,661 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:29:28,662 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:29,662 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:29,697 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:29:30,662 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:32,574 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:29:32,577 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:29:32,577 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:29:32,579 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:29:32,663 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:29:32,663 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:34,664 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:35,664 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:35,668 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:29:36,665 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:38,533 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:29:38,534 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:29:38,548 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:29:38,665 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:38,778 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:29:38,779 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:29:38,779 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:29:39,666 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:29:40,666 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:41,494 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:29:41,666 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:42,667 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:42,667 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/config.yaml
+2024-06-04 17:29:44,597 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:29:44,599 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:29:44,599 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:29:44,600 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:29:44,668 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:29:44,668 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:46,124 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:29:46,125 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:29:46,125 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:29:46,668 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:47,552 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:29:47,669 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:48,669 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:50,428 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:29:50,430 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:29:50,430 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:29:50,431 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:29:50,670 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:29:50,670 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:51,671 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:52,671 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:53,412 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:29:53,533 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:29:53,534 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:29:54,672 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:56,390 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:29:56,392 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:29:56,392 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:29:56,393 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:29:56,673 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:29:56,673 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:57,673 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:58,674 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:29:59,335 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:00,674 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:02,278 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:02,279 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:02,279 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:02,281 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:02,675 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:02,675 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:03,675 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:04,676 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:05,234 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:06,677 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:07,811 DEBUG   SystemMonitor:4673 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-04 17:30:07,813 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:30:08,202 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:08,204 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:08,205 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:08,206 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:08,533 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:30:08,534 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:30:08,678 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:08,678 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:09,678 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:10,678 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:11,165 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:12,679 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:13,986 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:13,988 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:13,988 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:13,990 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:14,680 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:14,681 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:15,681 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:16,681 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:17,090 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:18,682 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:20,001 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:20,002 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:20,002 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:20,004 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:20,683 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:20,683 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:20,777 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:30:20,777 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:30:20,777 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:30:21,683 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:22,126 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:22,684 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:23,533 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:30:23,534 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:30:24,685 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:26,049 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:26,050 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:26,051 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:26,051 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:26,685 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:26,686 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:27,607 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:27,686 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:28,686 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:30,687 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:32,090 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:32,092 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:32,092 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:32,093 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:32,645 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:32,688 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:32,688 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:33,688 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:34,688 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:36,689 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:37,814 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:30:37,815 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:38,224 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:38,225 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:38,226 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:38,227 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:38,534 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:30:38,534 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:30:38,690 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:38,690 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:39,690 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:40,691 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:42,691 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:43,116 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:44,040 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:44,041 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:44,041 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:44,042 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:44,692 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:44,692 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:45,693 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:46,693 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:48,443 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:48,694 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:49,865 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:49,867 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:49,867 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:49,868 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:50,694 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:50,695 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:51,695 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:52,695 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:53,533 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:30:53,534 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:30:53,813 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:30:54,696 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:55,928 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:30:55,930 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:30:55,930 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:30:55,931 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:30:56,697 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:30:56,698 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:57,698 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:58,698 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:30:58,890 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:00,699 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:01,706 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:01,709 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:01,709 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:01,710 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:02,700 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:02,701 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:03,701 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:04,693 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:04,701 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:06,702 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:07,671 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:07,673 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:07,673 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:07,674 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:07,703 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:07,815 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:31:08,534 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:31:08,535 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:31:08,703 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:09,704 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:10,671 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:10,704 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:12,705 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:13,517 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:13,519 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:13,520 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:13,520 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:13,705 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:14,705 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:15,706 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:16,490 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:16,706 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:18,707 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:19,483 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:19,485 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:19,485 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:19,486 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:19,707 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:20,708 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:21,708 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:22,389 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:22,709 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:23,534 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:31:23,534 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:31:24,709 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:25,221 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:25,223 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:25,223 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:25,224 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:25,710 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:26,710 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:27,710 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:28,210 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:28,711 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:30,712 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:31,210 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:31,212 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:31,212 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:31,213 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:31,712 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:32,713 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:33,713 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:34,177 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:34,714 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:36,714 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:37,029 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:37,030 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:37,031 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:37,032 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:37,715 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:37,816 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:31:38,534 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:31:38,535 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:31:38,715 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:39,715 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:39,956 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:40,600 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:31:40,600 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:31:40,600 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:31:40,716 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:42,717 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:42,837 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:42,838 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:42,839 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:42,840 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:43,717 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:44,717 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:45,718 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:45,791 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:46,718 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:48,719 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:48,799 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:48,801 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:48,801 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:48,802 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:49,719 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:50,720 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:50,863 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:51,720 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:52,721 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:53,534 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:31:53,535 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:31:54,714 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:31:54,716 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:31:54,716 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:31:54,717 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:31:54,722 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:31:54,722 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:56,236 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:31:56,722 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:57,723 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:31:58,723 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:00,521 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:00,522 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:00,522 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:00,523 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:00,724 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:00,725 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:01,725 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:02,037 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:02,725 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:04,726 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:06,400 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:06,402 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:06,402 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:06,403 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:06,727 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:06,727 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:07,727 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:07,817 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:32:07,818 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:08,534 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:32:08,535 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:32:08,727 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:10,728 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:12,213 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:12,215 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:12,215 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:12,216 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:12,729 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:12,729 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:13,729 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:13,730 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:14,730 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:16,731 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:17,962 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:17,964 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:17,964 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:17,965 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:18,731 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:18,732 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:19,523 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:19,732 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:20,732 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:22,733 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:23,534 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:32:23,535 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:32:23,969 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:23,971 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:23,971 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:23,972 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:24,734 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:24,734 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:25,463 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:25,734 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:26,734 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:28,736 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:29,713 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:29,715 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:29,715 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:29,716 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:29,736 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:30,736 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:31,236 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:31,737 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:32,737 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:34,738 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:35,729 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:35,731 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:35,731 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:35,732 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:35,738 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:36,287 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:36,739 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:37,739 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:37,820 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:32:38,535 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:32:38,536 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:32:38,739 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:40,740 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:41,592 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:41,592 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:41,593 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:41,593 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:41,595 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:41,741 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:42,741 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:43,742 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:44,742 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:46,743 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:47,435 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:47,445 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:47,446 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:47,447 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:47,448 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:47,743 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:48,744 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:49,792 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:50,792 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:52,475 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:52,793 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:53,454 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:53,456 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:53,456 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:53,457 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:53,535 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:32:53,536 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:32:53,794 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:32:54,794 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:55,795 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:56,795 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:58,016 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:32:58,796 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:32:59,450 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:32:59,452 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:32:59,452 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:32:59,453 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:32:59,796 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:00,797 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:01,797 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:02,798 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:03,857 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:04,798 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:05,314 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:33:05,315 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:33:05,316 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:33:05,317 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:05,799 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:06,799 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:07,800 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:07,821 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:33:08,535 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:33:08,536 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:33:08,800 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:09,854 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:10,801 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:11,199 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:33:11,201 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:33:11,201 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:33:11,202 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:11,802 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:12,802 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:13,802 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:14,803 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:15,581 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:16,804 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:16,969 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:33:16,970 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:33:16,970 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:33:16,972 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:17,804 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:18,805 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:19,805 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:20,805 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:21,469 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:22,806 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:22,825 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:33:22,827 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:33:22,827 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:33:22,827 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:23,536 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:33:23,537 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:33:23,807 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:23,807 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:24,807 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:26,808 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:27,288 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:28,796 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:33:28,797 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:33:28,797 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:33:28,799 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:28,808 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:28,809 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:29,809 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:30,809 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:32,810 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:33,169 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:34,574 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:33:34,576 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:33:34,577 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:33:34,578 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:34,811 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:34,811 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:35,811 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:36,812 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:37,823 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:33:38,536 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-04 17:33:38,536 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: stop_status
+2024-06-04 17:33:38,813 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:38,850 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:40,537 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:33:40,539 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:33:40,539 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:33:40,540 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:40,814 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:40,814 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:41,814 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:42,815 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:43,908 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:44,815 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:46,333 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-04 17:33:46,335 DEBUG   SenderThread:4673 [sender.py:send():378] send: history
+2024-06-04 17:33:46,335 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: summary_record
+2024-06-04 17:33:46,336 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:46,816 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:46,817 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:47,817 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:48,817 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:49,219 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:49,220 DEBUG   SenderThread:4673 [sender.py:send():378] send: exit
+2024-06-04 17:33:49,221 INFO    SenderThread:4673 [sender.py:send_exit():585] handling exit code: 255
+2024-06-04 17:33:49,221 INFO    SenderThread:4673 [sender.py:send_exit():587] handling runtime: 281
+2024-06-04 17:33:49,221 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:49,221 INFO    SenderThread:4673 [sender.py:send_exit():593] send defer
+2024-06-04 17:33:49,222 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:49,222 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 0
+2024-06-04 17:33:49,222 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:49,222 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-06-04 17:33:49,222 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 1
+2024-06-04 17:33:49,222 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:49,222 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 1
+2024-06-04 17:33:49,223 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:49,223 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-06-04 17:33:49,223 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 2
+2024-06-04 17:33:49,223 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:49,223 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 2
+2024-06-04 17:33:49,223 INFO    HandlerThread:4673 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-04 17:33:49,223 DEBUG   SystemMonitor:4673 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-04 17:33:49,224 DEBUG   SystemMonitor:4673 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-04 17:33:49,227 INFO    HandlerThread:4673 [interfaces.py:finish():200] Joined cpu monitor
+2024-06-04 17:33:49,227 INFO    HandlerThread:4673 [interfaces.py:finish():200] Joined disk monitor
+2024-06-04 17:33:49,279 INFO    HandlerThread:4673 [interfaces.py:finish():200] Joined gpu monitor
+2024-06-04 17:33:49,279 INFO    HandlerThread:4673 [interfaces.py:finish():200] Joined memory monitor
+2024-06-04 17:33:49,279 INFO    HandlerThread:4673 [interfaces.py:finish():200] Joined network monitor
+2024-06-04 17:33:49,280 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:49,280 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-06-04 17:33:49,280 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 3
+2024-06-04 17:33:49,280 DEBUG   SenderThread:4673 [sender.py:send():378] send: stats
+2024-06-04 17:33:49,281 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:49,281 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 3
+2024-06-04 17:33:49,281 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:49,281 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-06-04 17:33:49,281 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 4
+2024-06-04 17:33:49,281 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:49,282 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 4
+2024-06-04 17:33:49,282 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:49,282 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-06-04 17:33:49,282 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 5
+2024-06-04 17:33:49,282 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:49,282 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 5
+2024-06-04 17:33:49,282 DEBUG   SenderThread:4673 [sender.py:send():378] send: summary
+2024-06-04 17:33:49,283 INFO    SenderThread:4673 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-06-04 17:33:49,283 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:49,283 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-06-04 17:33:49,283 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 6
+2024-06-04 17:33:49,283 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:49,283 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 6
+2024-06-04 17:33:49,284 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:49,284 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-06-04 17:33:49,284 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 7
+2024-06-04 17:33:49,284 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: status_report
+2024-06-04 17:33:49,284 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:49,284 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 7
+2024-06-04 17:33:49,285 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:49,285 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-06-04 17:33:49,817 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:33:50,221 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-04 17:33:50,818 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:51,818 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:52,336 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 8
+2024-06-04 17:33:52,336 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: poll_exit
+2024-06-04 17:33:52,337 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:52,337 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 8
+2024-06-04 17:33:52,337 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:52,337 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-06-04 17:33:52,337 INFO    SenderThread:4673 [job_builder.py:build():432] Attempting to build job artifact
+2024-06-04 17:33:52,338 INFO    SenderThread:4673 [job_builder.py:_get_source_type():565] is repo sourced job
+2024-06-04 17:33:52,368 INFO    SenderThread:4673 [job_builder.py:build():541] adding wandb-job metadata file
+2024-06-04 17:33:52,376 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 9
+2024-06-04 17:33:52,377 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:52,377 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 9
+2024-06-04 17:33:52,377 DEBUG   SenderThread:4673 [sender.py:send():378] send: artifact
+2024-06-04 17:33:52,819 INFO    Thread-12 :4673 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:33:53,222 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-04 17:33:53,599 INFO    SenderThread:4673 [sender.py:send_artifact():1467] sent artifact job-https___github.com_TobyYang7_STllama.git_urbangpt_train_train_mem.py - {'id': 'QXJ0aWZhY3Q6ODU5NzIxOTE4', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4MTc4MjM5OA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODU5NzIxOTE4', 'versionIndex': 0}}}
+2024-06-04 17:33:53,599 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:53,599 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-06-04 17:33:53,600 INFO    SenderThread:4673 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-04 17:33:53,820 INFO    SenderThread:4673 [dir_watcher.py:finish():388] scan: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files
+2024-06-04 17:33:53,820 INFO    SenderThread:4673 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/config.yaml config.yaml
+2024-06-04 17:33:53,820 INFO    SenderThread:4673 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/conda-environment.yaml conda-environment.yaml
+2024-06-04 17:33:53,821 INFO    SenderThread:4673 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-metadata.json wandb-metadata.json
+2024-06-04 17:33:53,821 INFO    SenderThread:4673 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/requirements.txt requirements.txt
+2024-06-04 17:33:53,821 INFO    SenderThread:4673 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log output.log
+2024-06-04 17:33:53,821 INFO    SenderThread:4673 [dir_watcher.py:finish():402] scan save: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json wandb-summary.json
+2024-06-04 17:33:53,821 INFO    SenderThread:4673 [sender.py:transition_state():613] send defer: 10
+2024-06-04 17:33:53,821 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: poll_exit
+2024-06-04 17:33:53,822 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: defer
+2024-06-04 17:33:53,822 INFO    HandlerThread:4673 [handler.py:handle_request_defer():184] handle defer: 10
+2024-06-04 17:33:53,828 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: defer
+2024-06-04 17:33:53,828 INFO    SenderThread:4673 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-06-04 17:33:53,828 INFO    SenderThread:4673 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-04 17:33:54,196 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:54,196 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:33:54,196 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:54,203 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:54,203 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:33:54,203 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:54,223 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-04 17:33:54,223 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: poll_exit
+2024-06-04 17:33:54,338 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:54,339 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:33:54,339 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:54,339 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:54,339 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:33:54,339 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:55,080 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:55,080 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:33:55,080 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:55,224 DEBUG   HandlerThread:4673 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-04 17:33:55,225 DEBUG   SenderThread:4673 [sender.py:send_request():405] send_request: poll_exit
+2024-06-04 17:33:55,413 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:55,414 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:33:55,414 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:55,512 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:55,512 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:33:55,512 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:55,669 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:55,669 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:33:55,669 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:55,691 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:55,691 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:33:55,691 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:56,203 WARNING StreamThr :4673 [internal.py:is_dead():413] Internal process exiting, parent pid 4599 disappeared
+2024-06-04 17:33:56,203 ERROR   StreamThr :4673 [internal.py:wandb_internal():151] Internal process shutdown.
+2024-06-04 17:33:56,224 INFO    HandlerThread:4673 [handler.py:finish():882] shutting down handler
+2024-06-04 17:33:56,225 INFO    WriterThread:4673 [datastore.py:close():296] close: /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/run-u72h5f7v.wandb
+2024-06-04 17:33:56,225 INFO    SenderThread:4673 [sender.py:finish():1545] shutting down sender
+2024-06-04 17:33:56,225 INFO    SenderThread:4673 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-04 17:33:56,225 INFO    SenderThread:4673 [file_pusher.py:join():175] waiting for file pusher
+2024-06-04 17:33:57,829 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:57,830 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:33:57,830 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:57,838 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:57,838 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:33:57,838 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:58,024 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:58,024 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:33:58,025 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:33:58,178 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:33:58,178 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:33:58,178 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:02,048 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:02,048 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:34:02,048 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:02,434 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:02,434 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:34:02,434 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:02,772 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:02,772 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:34:02,772 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:03,208 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:03,209 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:34:03,209 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:10,519 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:10,520 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:34:10,520 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:12,208 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:12,209 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:34:12,209 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:12,612 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:12,613 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:34:12,613 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:12,824 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:12,824 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:34:12,824 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:27,669 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:27,669 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:34:27,669 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:28,979 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:28,979 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:34:28,979 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:30,646 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:30,647 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:34:30,647 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:34:31,870 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:34:31,870 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:34:31,870 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:35:01,498 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:35:01,498 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:35:01,498 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:35:05,783 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:35:05,783 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:35:05,783 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:35:06,817 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:35:06,817 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:35:06,817 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:35:10,940 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:35:10,940 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:35:10,940 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:36:13,395 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:36:13,395 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:36:13,395 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:36:21,204 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:36:21,204 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:36:21,204 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:36:22,442 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:36:22,442 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:36:22,442 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:36:22,602 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:36:22,602 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:36:22,602 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:38:40,567 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:38:40,567 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:38:40,567 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:38:42,420 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:38:42,421 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:38:42,421 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:38:47,382 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:38:47,382 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:38:47,382 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:38:56,480 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:38:56,480 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:38:56,480 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:38:58,280 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:38:58,280 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:38:58,280 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:43:12,694 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:43:12,694 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:43:12,694 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:43:14,580 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:43:14,580 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:43:14,580 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:43:23,522 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:43:23,523 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:43:23,523 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:43:54,298 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:43:54,298 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:43:54,298 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:44:53,228 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:44:53,229 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:44:53,229 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:48:20,472 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-summary.json?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kwd6YvVy7jD3AQnSOehYrroyb8TuS36yy28VX549DI%2Fn76Gd9lg8OAlxrLMx%2ByQjZKJUZgy%2FbBav3zAXy7BhYAGwFKaZW%2By5hHaBVLtRMWjg4B3MJUoKPrgm07nVH577qEV5BZJnNznhilyBJBWUqF3Kt%2FbJNqoHpAkIpns3iiHRsSOiiEYaVt%2BD6sdbtGhouJr%2BFiO6U9QiEmMh2%2BHIFz%2FccjfOXVYfRFdyKdWUOwJPOLQME7dqULL%2FUV0Uq19Ut92pi%2BGLQfkxEtHdT%2BbBv0EHtvQKrlvSyNdu3nxKoBys9iRtdpazuVRL5QFYQMch3HEb7Ahuyb209GXBreIhUA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:48:20,473 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '223'}
+2024-06-04 17:48:20,473 ERROR   wandb-upload_4:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:48:23,088 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/config.yaml?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Zp8gQsVKM9KWxsyANX8IqAANPyIAQrsismWjvH83ABj31VU7xqr%2FzrJstqXqA4w%2BRpkiYVU3WkpjvsoCU3YH81ZvgekyjDhoYb6OqQTBY6jyUOgyu2Zh4RzhUiiZx4Fqi4ozCWUnPAYffg%2FwXxdMgaVCqUCeKOa9%2FIsM1QjT%2FePV%2BytG8Gncgy7phbBrRsErcS9Ho1OVoG8C0AhMXnFTRT4urOkJATMRB0PsXaNPz05l8wEsxyj34SVXZqaPZNn8EAKdBoubF0eOTMeUnP0AL0HzDxqpSM6rOhCiDtRAM5PirSxzChAG8KuWYTouq6%2B59PMaS%2FTLu1MPYJARxXAf%2BA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:48:23,089 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10178'}
+2024-06-04 17:48:23,089 ERROR   wandb-upload_1:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:49:07,481 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/output.log?Expires=1717580034&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=JcbD8DhoHq%2FSaylXuSQyE0buEqyW17WXKj%2Fxk%2Fl%2FuqNziCoreGjtQCH6r4ScclSaYiKiRElLAKAvDVDYoOoVl1LomPk3zzTbRrjAfJuG84lrWgNO8m8nLSGO8ONG1DAzA2%2FQWy%2F9kpiptIyPUmqONckI7mXLhhDoxk2bfiHcc0o2rMInebgVl84Axz%2FdPi61jlAqo5%2B%2BXK9Hva35BokB9iOdub85RgmeeTe21Qha4OOkoHQ23j6w925x2lngWlr719A%2BFWMfvwjddJ%2BdN%2FCFPkQ9L2DahYarWfsc1oQ%2FyizoiT%2FPDq2ZSd3uy4Ke82%2BdHo1yCf0uMZz8Q4WbaHBSQw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:49:07,481 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '82478'}
+2024-06-04 17:49:07,481 ERROR   wandb-upload_3:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:49:33,739 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/requirements.txt?Expires=1717580033&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UkLQroQXPqjvP1igdfukKnCOL1c8j977Fl0V4NjRjYxEWsDOrEfAkY1Cje%2BOs8FUzwf67ZwbJUaeX7%2FpJn%2BCKZHylt8y%2BlJLXUCCZsZqvVk5yMlqA9GMZo%2FrtttV%2F8rjCFTpVYAsybVBq29FgWV5PyZys2XLUyZoP8RuH68kvX3%2Ba1EvN%2BeZ4Qx7xyHDCIEMu0OOs3ls9rBdsfKiQxUaD%2FL2wgHp6KbN1uq3cJBJALOIME96wg0KqSf%2Fjo%2B4kasKWZcUjkcDyb2gCvQLU1b7OPUhUAe3MOTTZTE5ebLNc8DogtpXT28mtSvjLUjgGc8BjzmN01jm4VihezZ0IqQLuA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:49:33,739 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4328'}
+2024-06-04 17:49:33,739 ERROR   wandb-upload_2:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:50:38,934 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2738] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/toby-yang/huggingface/u72h5f7v/wandb-metadata.json?Expires=1717579748&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=YPxgv9f4z6N9wCIDZFordot8JBxIwXyCbVWs8a082c9QChDBjBXPjur%2B7FhRPJ%2FtYszkO%2BuZS%2Byy7iGAEtC8Hmf%2B9cjHn3y5eOe6wNj3pozs0RhXl6LtrJ2dJ4KKjWeoR3t1dadRxFW%2BXYxuq9brChg1Xe4wv%2Firf501Hl5hbb%2F7eKkHOO%2BZHVKz%2BUUfuyMTmCufDaIS%2B4M4fvcfgGegT%2BYjR2P441TDfJun4iHZQfWI9WKXUeCyVBDvMwXoAiLEpir8UA0CGO7vHQ8KBA6mrhmd9mnpjCG7ha2Nze6IJssB%2FxkIA4AqLIds8T31ero0y5GFAnkIWG7cGOqdm0Ugvg%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2024-06-04 17:50:38,934 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2740] upload_file request headers: {'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10734'}
+2024-06-04 17:50:38,934 ERROR   wandb-upload_0:4673 [internal_api.py:upload_file():2742] upload_file response body: 
+2024-06-04 17:54:30,357 INFO    wandb-upload_1:4673 [upload_job.py:push():130] Uploaded file /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/config.yaml
+2024-06-04 17:54:33,687 INFO    wandb-upload_4:4673 [upload_job.py:push():130] Uploaded file /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/wandb-summary.json
+2024-06-04 17:54:47,850 INFO    wandb-upload_2:4673 [upload_job.py:push():130] Uploaded file /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/requirements.txt
+2024-06-04 17:55:08,073 INFO    wandb-upload_3:4673 [upload_job.py:push():130] Uploaded file /root/autodl-tmp/STllama/wandb/run-20240604_172906-u72h5f7v/files/output.log
+2024-06-04 17:56:06,134 INFO    wandb-upload_0:4673 [upload_job.py:push():130] Uploaded file /tmp/tmp1zj1bhq_wandb/90z3dtpu-wandb-metadata.json
+2024-06-04 17:56:06,334 INFO    Thread-11 :4673 [sender.py:transition_state():613] send defer: 11
+2024-06-04 17:56:06,345 INFO    SenderThread:4673 [file_stream.py:finish():601] file stream finish called
+2024-06-04 17:56:06,591 INFO    SenderThread:4673 [file_stream.py:finish():605] file stream finish is done
